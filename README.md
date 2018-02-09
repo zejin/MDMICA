@@ -12,15 +12,18 @@ The two main parts are:
 
 ## Applying mutual dependence measures
 
-The mutual dependence measures:
-- complete measure based on complete V-statistics
-- simplified complete measure based on incomplete V-statistics
-- asymmetric measure based on distance covariance
-- symmectric measure based on distance covariance
+The mutual dependence measures include:
+- distance-based energy statistics 
+  - asymmetric measure based on distance covariance
+  - symmectric measure based on distance covariance
+  - simplified complete measure based on incomplete V-statistics
+- kernel-based maximum mean discrepancies
+  - d-variable Hilbert−Schmidt independence criterion based on 
+    Hilbert−Schmidt independence criterion
 
 ## Initializing local optimization methods
 
-The initialization methods:
+The initialization methods include:
 - Latin hypercube sampling
 - Bayesian optimization
 

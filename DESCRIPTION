@@ -2,12 +2,23 @@ Package: MDMICA
 Title: Independent Component Analysis via Mutual Dependence Measures
 Version: 1.0.0
 Date: 2018-01-30
-Authors@R: person("Ze", "Jin", email = "zj58@cornell.edu", role = c("aut", "cre"))
-Description: Implementation of independent component analysis methods
-	based on mutual dependence measures in Jin, Z. and Matteson, D. S. (2017) 
-	<https://arxiv.org/abs/1709.02532>.
-Depends: R (>= 3.2.3)
-Suggests: testthat
+Authors@R: c(
+	person("Ze", "Jin", email = "zj58@cornell.edu", role = c("aut", "cre")),
+	person("David", "Matteson S.", email = "matteson@cornell.edu", role = c("aut"))
+	)
+Description: Implementation of independent component analysis methods based on 
+	mutual dependence measures in Jin, Z., and Matteson, D. S. (2017) 
+	<https://arxiv.org/abs/1709.02532> and Pfister, N., et al. (2018) 
+	<doi:10.1111/rssb.12235>.
+Depends: 
+	R (>= 3.4.0)
+Imports:
+	energy (>= 1.7-2),
+    MDMeasure (>= 1.0.0),
+    dHSIC (>= 2.0),
+    rBayesianOptimization (>= 1.1.0)
+Suggests: 
+	testthat (>= 2.0.0)
 License: GPL (>= 2)
 LazyData: true
 RoxygenNote: 6.0.1
