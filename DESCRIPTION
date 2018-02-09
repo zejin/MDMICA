@@ -8,8 +8,7 @@ Authors@R: c(
     )
 Description: Implementation of independent component analysis methods based on 
     mutual dependence measures in Jin, Z., and Matteson, D. S. (2017) 
-    <https://arxiv.org/abs/1709.02532> and Pfister, N., et al. (2018) 
-    <doi:10.1111/rssb.12235>.
+    <https://arxiv.org/abs/1709.02532> and Pfister, N., et al. (2018) <doi:10.1111/rssb.12235>.
 Depends: 
     R (>= 3.4.0)
 Imports:
