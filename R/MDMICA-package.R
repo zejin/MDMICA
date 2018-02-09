@@ -35,7 +35,7 @@
 #'
 #' @title Independent Component Analysis via Mutual Dependence Measures
 #'
-#' @author Ze Jin \email{zj58@@cornell.edu},
+#' @author Ze Jin \email{zj58@cornell.edu},
 #'   David S. Matteson \email{matteson@cornell.edu}
 
 NULL 

@@ -49,6 +49,8 @@
 #' @importFrom dHSIC dhsic
 #' @importFrom rBayesianOptimization BayesianOptimization
 #' 
+#' @include functions.R
+#'
 #' @export
 #'
 #' @examples
