@@ -4,49 +4,50 @@ X <- matrix(rnorm(10 * 3), 10, 3)
 
 #
 set.seed(12345)
-mdm_ica(X, mdm_type = "asym", opt_algo = "def") # -0.4625957
+mdm_ica(X, mdm_type = "asym", opt_algo = "def") 
 
 set.seed(12345)
-mdm_ica(X, mdm_type = "asym", opt_algo = "par") # -0.4625916
+mdm_ica(X, mdm_type = "asym", opt_algo = "par") 
 
 set.seed(12345)
-mdm_ica(X, mdm_type = "asym", num_bo = 1, kernel = "exp", opt_algo = "par") # -0.4625916
+mdm_ica(X, mdm_type = "asym", num_bo = 1, kernel = "exp", opt_algo = "par") 
 
 set.seed(12345)
-mdm_ica(X, mdm_type = "asym", num_bo = 1, kernel = "mat", opt_algo = "par") # -0.4625916
-
-#
-set.seed(12345)
-mdm_ica(X, mdm_type = "sym", opt_algo = "par") # -0.6991645
-
-set.seed(12345)
-mdm_ica(X, mdm_type = "sym", num_bo = 1, kernel = "exp", opt_algo = "par") # -0.6991645
-
-set.seed(12345)
-mdm_ica(X, mdm_type = "sym", num_bo = 1, kernel = "mat", opt_algo = "par") # -0.6991645
+mdm_ica(X, mdm_type = "asym", num_bo = 1, kernel = "mat", opt_algo = "par") 
 
 #
 set.seed(12345)
-mdm_ica(X, mdm_type = "comp", opt_algo = "par") # -0.7408721
+mdm_ica(X, mdm_type = "sym", opt_algo = "par")
 
 set.seed(12345)
-mdm_ica(X, mdm_type = "comp", num_bo = 1, kernel = "exp", opt_algo = "par") # -0.7408721
+mdm_ica(X, mdm_type = "sym", num_bo = 1, kernel = "exp", opt_algo = "par") 
 
 set.seed(12345)
-mdm_ica(X, mdm_type = "comp", num_bo = 1, kernel = "mat", opt_algo = "par") # -0.7408721
+mdm_ica(X, mdm_type = "sym", num_bo = 1, kernel = "mat", opt_algo = "par") 
 
 #
 set.seed(12345)
-mdm_ica(X, mdm_type = "dhsic", opt_algo = "par") # -0.7903329
+mdm_ica(X, mdm_type = "comp", opt_algo = "par")
 
 set.seed(12345)
-mdm_ica(X, mdm_type = "dhsic", num_bo = 1, kernel = "exp", opt_algo = "par") # -0.7903329
+mdm_ica(X, mdm_type = "comp", num_bo = 1, kernel = "exp", opt_algo = "par")
 
 set.seed(12345)
-mdm_ica(X, mdm_type = "dhsic", num_bo = 1, kernel = "mat", opt_algo = "par") # -0.7903329
+mdm_ica(X, mdm_type = "comp", num_bo = 1, kernel = "mat", opt_algo = "par")
+
+#
+set.seed(12345)
+mdm_ica(X, mdm_type = "dhsic", opt_algo = "par")
+
+set.seed(12345)
+mdm_ica(X, mdm_type = "dhsic", num_bo = 1, kernel = "exp", opt_algo = "par")
+
+set.seed(12345)
+mdm_ica(X, mdm_type = "dhsic", num_bo = 1, kernel = "mat", opt_algo = "par")
 
 # cd ica/simulation/comp_4/exp_3/bo/seed_15/jordan_mix_0
 # n_iter = 1
+# i, j -> j, i
 source('../fun_.R')
 set.seed(12345)
 x <- matrix(rnorm(10 * 3), 10, 3)

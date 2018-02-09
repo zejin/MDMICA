@@ -150,13 +150,12 @@ mdm_ica_opt <- function(Z, theta_init = NULL, mdm_type, opt_algo) {
     for (i in 1:(d - 1)) {
       l <- cum_index[i] + 1
       u <- cum_index[i + 1]
-      theta_hat[l:u] <- rep("FALSE", index[i])
+      theta_hat[l:u] <- rep(NA, index[i])
       p_init <- theta_init[l:u] 
       fun <- mdm_ica_def_obj(Z = Z, index = i, theta = theta_hat, mdm_type = mdm_type)
       opt <- nlm(f = fun, p = p_init)
       obj <- obj + opt$minimum
       theta_hat[l:u] <- opt$estimate
-      theta_hat <- as.numeric(theta_hat)
     }
   } else if (opt_algo == "par") {
     fun <- mdm_ica_par_obj(Z = Z, mdm_type = mdm_type)
@@ -176,8 +175,7 @@ mdm_ica_opt <- function(Z, theta_init = NULL, mdm_type, opt_algo) {
 mdm_ica_def_obj <- function(Z, index, theta, mdm_type) {
   if (mdm_type == "asym") {
     function(p) {
-      theta[!is.na(!as.logical(theta))] <- p
-      theta <- as.numeric(theta)
+      theta[is.na(theta)] <- p
       d <- dim(Z)[2]
       W <- theta_to_W(theta)
       S <- Z %*% t(W)

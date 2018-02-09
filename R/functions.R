@@ -84,11 +84,18 @@ theta_to_W <- function(theta) {
   for (i in 1:(d - 1)) {
     for (j in (i + 1):d) {
       Q_ij <- givens_rot_mat(theta[index], d, c(i, j))
-      W <- Q_ij %*% W 
+      W <- Q_ij %*% W
       index <- index + 1
     }
   }
-
+  # for (j in 1:(d - 1)) {
+  #   for (i in (j + 1):d) {
+  #     Q_ij <- givens_rot_mat(theta[index], d, c(i, j))
+  #     W <- Q_ij %*% W 
+  #     index <- index + 1
+  #   }
+  # }
+  
   return(W)
 }
   
